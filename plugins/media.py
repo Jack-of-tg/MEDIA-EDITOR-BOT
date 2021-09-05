@@ -47,12 +47,13 @@ async def media(client, message):
      try:
          id = link.split('/')[4]
          msg_id = link.split('/')[5]
-         chid = a + str(id)
+         cd = a + str(id)
+         chid = int(cd)
 
      except:
           chid = link.split('/')[3]
           msg_id = link.split('/')[4]          
-
+ 
      try:
         await client.edit_message_media(
                chat_id = chid,
@@ -62,7 +63,7 @@ async def media(client, message):
      except Exception as e:
            await message.reply_text(e)
            return
-     await message.reply.text('**successfully Edited the media**')
+     await message.reply_text('**successfully Edited the media**')
 
          
    
