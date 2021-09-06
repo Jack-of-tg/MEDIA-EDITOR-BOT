@@ -1,12 +1,14 @@
 import os 
+from config import Config
+
 
 plugins = dict(root="plugins")
 
 app = pyrogram.Client(
     "Media editor",
-    bot_token=os.environ["TG_BOT_TOKEN"],
-    api_id=int(os.environ["API_ID"]),
-    api_hash=os.environ["API_HASH"],
+    bot_token=TG_BOT_TOKEN,
+    api_id=API_ID,
+    api_hash=API_HASH,
     plugins=plugins
 )
 
