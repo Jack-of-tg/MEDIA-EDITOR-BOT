@@ -1,39 +1,13 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-# (c) Shrimadhav U K
+import os 
 
-# the logging things
-import logging
-logging.basicConfig(level=logging.DEBUG,
-                    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
-logger = logging.getLogger(__name__)
+plugins = dict(root="plugins")
 
-import os
-from pyromod import listen
+app = pyrogram.Client(
+    "Media editor",
+    bot_token=os.environ["TG_BOT_TOKEN"],
+    api_id=int(os.environ["API_ID"]),
+    api_hash=os.environ["API_HASH"],
+    plugins=plugins
+)
 
-
-# the secret configuration specific things
-if bool(os.environ.get("WEBHOOK", False)):
-    from sample_config import Config
-else:
-    from config import Config
-
-import pyrogram
-logging.getLogger("pyrogram").setLevel(logging.WARNING)
-
-
-DOWNLOAD_LOCATION = "/downloads"
-
-if __name__ == "__main__" :
-    
-    plugins = dict(
-        root="plugins"
-    )
-    app = pyrogram.Client(
-        "Media editor",
-        bot_token=os.environ["TG_BOT_TOKEN"],
-        api_id=int(os.environ["API_ID"]),
-        api_hash=os.environ["API_HASH"],
-        plugins=plugins
-    )
-    app.run()
+app.run()
