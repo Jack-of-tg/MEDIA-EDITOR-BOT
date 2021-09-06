@@ -14,4 +14,4 @@ CREDITS
 
 * [Dan](https://telegram.dog/haskell) for his [Pyrogram Library](https://github.com/pyrogram/pyrogram)
 
-* [CodeXBotz](https://telegram.dog/CodeXBotz) for their [MediaEditorRoBot](https.t.me/MediaEditorRoBot)
+* [CodeXBotz](https://telegram.dog/CodeXBotz) for their [MediaEditorRoBot](https://t.me/MediaEditorRoBot)
