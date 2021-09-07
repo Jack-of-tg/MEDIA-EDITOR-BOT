@@ -11,23 +11,23 @@ async def media(client, message):
     
      if message.photo:
         file_id = message.photo.file_id
-        mid = InputMediaPhoto(file_id)
+        mid = InputMediaPhoto(file_id, caption=message.caption and message.caption.html)
 
      elif message.document:
         file_id = message.document.file_id
-        mid = InputMediaDocument(file_id)
+        mid = InputMediaDocument(file_id, caption=message.caption and message.caption.html)
 
      elif message.video:
         file_id = message.video.file_id
-        mid = InputMediaVideo(file_id)
+        mid = InputMediaVideo(file_id, caption=message.caption and message.caption.html)
 
      elif message.animation:
         file_id = message.animation.file_id
-        mid = InputMediaAnimation(file_id)
+        mid = InputMediaAnimation(file_id, caption=message.caption and message.caption.html)
 
      elif message.audio:
           file_id  = message.audio.file_id
-          mid = InputMediaAudio(file_id)
+          mid = InputMediaAudio(file_id, caption=message.caption and message.caption.html)
      else:
          print('no way')
 
