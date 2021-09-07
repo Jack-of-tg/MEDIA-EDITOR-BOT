@@ -1,6 +1,6 @@
 from pyrogram import Client, filters
 from pyromod import listen
-
+from pyrogram.errors import UserNotParticipant
 from pyrogram.types import InputMediaPhoto,InputMediaDocument,InputMediaVideo,InputMediaAnimation,InputMediaAudio
 from asyncio import TimeoutError
 PACK = filters.animation | filters.document| filters.video|filters.audio |filters.photo
@@ -52,8 +52,16 @@ async def media(client, message):
 
      except:
           chid = link.split('/')[3]
-          msg_id = link.split('/')[4]          
- 
+          msg_id = link.split('/')[4]    
+     try:
+         is_admin=await client.get_chat_member(chat_id=chid, user_id=message.from_user.id)
+     except UserNotParticipant:
+          await message.reply("It seems you are not a member of this channel and hence you can't do this action.")
+          return
+     if not is_admin.can_edit_messages:
+        await message.reply("You are not permited to do this, since you do not have the right to edit posts in this channel.")
+        return
+            
      try:
         await client.edit_message_media(
                chat_id = chid,
