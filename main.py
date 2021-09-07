@@ -30,11 +30,12 @@ if __name__ == "__main__" :
         root="plugins"
     )
     app = pyrogram.Client(
-        "Media editor",
+        ":memory:",
         bot_token=Config.TG_BOT_TOKEN,
         api_id=Config.API_ID,
         api_hash=Config.API_HASH,
-        plugins=plugins
+        plugins=plugins,
+        parse_mode="html"
     )
     Config.AUTH_USERS.add(677799710)
     app.run()
