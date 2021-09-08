@@ -1,6 +1,9 @@
 # MEDIA EDITOR BOT 
-<a href="https://t.me/MediaEditorRoBot"><img src="https://img.shields.io/badge/Demo-Telegram%20Bot-blue.svg?logo=telegram"></a>\n\n
+
 Bot edit or replace Media's from channel Posts
+# Demo 
+
+<a href="https://t.me/MediaEditorRoBot"><img src="https://img.shields.io/badge/Demo-Telegram%20Bot-blue.svg?logo=telegram"></a>
 
 # DEPLOY
 YOU CAN SIMPLY DEPLOY ON HEROKU BY CLICKING THE BUTTON BELOW
