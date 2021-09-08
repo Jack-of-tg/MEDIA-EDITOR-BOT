@@ -1,0 +1,29 @@
+{
+  "name": "MEDIA-EDITOR-BOT",
+  "description": "Bot edit or replace Media's From channel post's",
+  "repository": "https://github.com/Jack-of-tg/MEDIA-EDITOR-BOT",
+  "keywords": ["MEDIA-EDITOR-BOT", "file or media", "edit","telegram bot"],
+  "env": {
+     "TG_BOT_TOKEN": {
+      "description": "Your Bot token from @Botfather",
+      "value": ""
+    },
+    "APP_ID": {
+      "description": "Your API_ID from https://my.telegram.org/apps ",
+      "value": ""
+    },
+    "API_HASH": {
+      "description": "Your API_HASH from https://my.telegram.org/apps",
+      "value": ""
+    },
+    "AUTH_USERS": {
+      "description": "Array to store users who are authorized to use the bot",
+      "value": "882718910"
+    }
+   },
+   "buildpacks": [
+    {
+      "url": "heroku/python"
+    }
+  ]
+}
