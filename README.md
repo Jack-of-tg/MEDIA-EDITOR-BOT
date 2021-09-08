@@ -18,7 +18,7 @@ API_HASH      - From my.telegram.org (or @UseTGXBot)
 
 AUTH_USERS : Array to store users who are authorized to use the bot``
 ````
-##CREDITS
+## credits 
 
 * [Dan](https://telegram.dog/haskell) for his [Pyrogram Library](https://github.com/pyrogram/pyrogram)
 
