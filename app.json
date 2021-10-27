@@ -12,6 +12,10 @@
       "description": "Your API_ID from https://my.telegram.org/apps ",
       "value": ""
     },
+    "WEBHOOK": {
+      "description": "leaves it as anything",
+      "value": "Anything"
+    },
     "API_HASH": {
       "description": "Your API_HASH from https://my.telegram.org/apps",
       "value": ""
