@@ -3,11 +3,11 @@ from pyrogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
 START_MSG = """**Hi {}
   
-I am an Media Editor bot ...
+I am a Media Editor bot ...
 
-You can edit document,video,gif,audio,photo etc..
+You can edit/relace the documents,videos,gifs,audios,photos etc… Of Your Channels easily By Using Me**
 
-For More hit /help **
+`For More Info On Usage Hit ➟` /help 
 
 """
 
@@ -15,11 +15,11 @@ For More hit /help **
 HELP_MSG = """
 Follow the step..
 
-🌀First send me an media that you need to replace the other one
+🌀First Send Me A Media That You Need To Edit/Replace The Other One
 
-🌀Send the link of the media that you need to Edit
+🌀Send The Link Of The Media That Will Be Replaced/Edited
 
-NB: Note the bot is admin in the channel 
+NB: Note both you & the bot must be an admin in the targert channel 
 
 """
 
@@ -34,7 +34,8 @@ async def start(client, message):
         text=START_MSG.format(message.from_user.mention),
         disable_web_page_preview=True,
         reply_markup = InlineKeyboardMarkup([[InlineKeyboardButton(text="OWNER",url = "t.me/jack_of_tg")]]),
-        reply_to_message_id=message.message_id
+        reply_to_message_id=message.message_id,
+        parse_mode="md"
     )    
 
 
