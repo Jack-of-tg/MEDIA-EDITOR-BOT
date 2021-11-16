@@ -13,7 +13,7 @@ You can edit/relace the documents,videos,gifs,audios,photos etc… Of Your Chann
 
 
 HELP_MSG = """
-Follow the step..
+Follow the steps...
 
 🌀First Send Me A Media That You Need To Edit/Replace The Other One
 
