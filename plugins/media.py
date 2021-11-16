@@ -4,11 +4,15 @@ from pyrogram.errors import UserNotParticipant
 from pyrogram.types import InputMediaPhoto,InputMediaDocument,InputMediaVideo,InputMediaAnimation,InputMediaAudio
 from asyncio import TimeoutError
 PACK = filters.animation | filters.document| filters.video|filters.audio |filters.photo
+if bool(os.environ.get("WEBHOOK", False)):
+    from sample_config import Config
+else:
+    from config import Config
 
 
 @Client.on_message(PACK  & filters.private)
 async def media(client, message):
-     if message.chat.id not in AUTH_USERS:
+     if message.chat.id not in Config.AUTH_USERS:
         return
      if message.photo:
         file_id = message.photo.file_id
