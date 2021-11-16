@@ -3,6 +3,7 @@ from pyromod import listen
 from pyrogram.errors import UserNotParticipant
 from pyrogram.types import InputMediaPhoto,InputMediaDocument,InputMediaVideo,InputMediaAnimation,InputMediaAudio
 from asyncio import TimeoutError
+import os
 PACK = filters.animation | filters.document| filters.video|filters.audio |filters.photo
 if bool(os.environ.get("WEBHOOK", False)):
     from sample_config import Config
