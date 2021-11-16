@@ -8,7 +8,8 @@ PACK = filters.animation | filters.document| filters.video|filters.audio |filter
 
 @Client.on_message(PACK  & filters.private)
 async def media(client, message):
-    
+     if message.chat.id not in AUTH_USERS:
+        return
      if message.photo:
         file_id = message.photo.file_id
         mid = InputMediaPhoto(file_id, caption=message.caption and message.caption.html)
