@@ -43,7 +43,7 @@ async def media(client, message):
 
      except TimeoutError:
            await message.reply_text(
-             "```Session Timed Out.Resend the file to Start again```",
+             "```Session Timed Out. Resend the file to Start again```",
              parse_mode="md",
              quote=True
            )
@@ -77,7 +77,10 @@ async def media(client, message):
      except Exception as e:
            await message.reply_text(e)
            return
-     await message.reply_text('**successfully Edited the media**')
+     await message.reply_text("**successfully Edited the media**",
+             parse_mode="md",
+             quote=True
+           )
 
          
    
